@@ -1,7 +1,12 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,19 +15,23 @@ body {
   color: #ffffff;
 }
 
-/* CAPA */
+
+/* =========================
+   CAPA
+========================= */
+
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 32px 20px;
+  padding: 36px 20px;
 
-background-image: url("assets/background.jpg");
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-background-color: #080808;
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #080808;
 }
 
 .hero-conteudo {
@@ -31,38 +40,46 @@ background-color: #080808;
   text-align: center;
 }
 
-.marca h1 {
-  font-family: Georgia, serif;
-  font-size: 78px;
-  font-weight: 400;
-  line-height: 1;
-  margin-bottom: 10px;
+
+/* LOGO */
+
+.marca {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 28px;
 }
 
-.marca h2 {
-  font-family: Georgia, serif;
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 6px;
+.logo-ar {
+  display: block;
+  width: 250px;
+  max-width: 85%;
+  height: auto;
+  object-fit: contain;
 }
 
-.especialidade {
-  font-family: Georgia, serif;
-  font-size: 15px;
-  letter-spacing: 1px;
-  color: #f6f5f2;
-  margin-bottom: 30px;
-}
+
+/* FOTO PROFISSIONAL */
 
 .foto-profissional {
   width: 210px;
   height: 270px;
+
   margin: 0 auto 28px;
 
-  background: url("assets/aly.jpg") center/cover no-repeat;
+  background-image: url("assets/aly.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 
-  border-radius: 120px 120px 20px 20px;
+  border-radius: 120px 120px 24px 24px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.45);
 }
+
+
+/* CHAMADA */
 
 .chamada {
   font-family: Georgia, serif;
@@ -71,12 +88,20 @@ background-color: #080808;
   margin-bottom: 28px;
 }
 
+.chamada p:first-child {
+  color: #ffffff;
+}
+
 .chamada p:last-child {
   color: #a6a6a6;
 }
 
+
+/* BOTÃO PRINCIPAL */
+
 .botao-agendar {
   display: inline-block;
+
   width: 100%;
   max-width: 320px;
 
@@ -86,13 +111,16 @@ background-color: #080808;
   color: #080808;
 
   text-decoration: none;
+
   font-size: 13px;
   font-weight: bold;
   letter-spacing: 1px;
 
   border-radius: 4px;
 
-  transition: 0.3s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
 .botao-agendar:hover {
@@ -100,143 +128,264 @@ background-color: #080808;
   transform: translateY(-2px);
 }
 
-/* SOBRE */
+
+/* =========================
+   SOBRE
+========================= */
+
 .sobre {
   background: #f6f5f2;
   color: #080808;
+
   text-align: center;
-  padding: 70px 24px;
+
+  padding: 72px 24px;
 }
 
 .sobre h2 {
   font-family: Georgia, serif;
   font-size: 32px;
-  margin-bottom: 18px;
+  font-weight: 400;
+
+  margin-bottom: 20px;
 }
 
 .sobre p {
-  max-width: 500px;
-  margin: auto;
-  line-height: 1.7;
-  color: #444;
+  max-width: 520px;
+  margin: 0 auto;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #444444;
 }
 
-/* PROCEDIMENTOS */
+
+/* =========================
+   PROCEDIMENTOS
+========================= */
+
 .procedimentos {
   background: #ffffff;
   color: #080808;
-  padding: 70px 24px;
+
   text-align: center;
+
+  padding: 72px 20px;
 }
 
 .procedimentos h2 {
   font-family: Georgia, serif;
+
   font-size: 34px;
-  margin-bottom: 40px;
+  font-weight: 400;
+
+  margin-bottom: 42px;
 }
 
 .lista-procedimentos {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px 18px;
 
-  max-width: 600px;
-  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 36px 20px;
+
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .lista-procedimentos article {
   text-align: center;
 }
 
+
+/* FOTO CIRCULAR */
+
+.foto-procedimento {
+  width: 120px;
+  height: 120px;
+
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+
+  background: #e8e8e8;
+
+  background-size: cover;
+  background-position: center;
+
+  border: 2px solid #f1f1f1;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
 .lista-procedimentos h3 {
   font-family: Georgia, serif;
-  font-size: 18px;
+
+  font-size: 17px;
+  font-weight: 400;
+
   margin-bottom: 8px;
 }
 
 .lista-procedimentos p {
-  font-size: 13px;
-  line-height: 1.5;
-  color: #666;
+  font-size: 12px;
+  line-height: 1.55;
+
+  color: #666666;
 }
 
-/* LOCALIZAÇÃO */
+
+/* =========================
+   LOCALIZAÇÃO
+========================= */
+
 .localizacao {
   background: #f6f5f2;
   color: #080808;
+
   text-align: center;
-  padding: 70px 24px;
+
+  padding: 72px 24px;
 }
 
 .localizacao h2 {
   font-family: Georgia, serif;
+
   font-size: 32px;
-  margin-bottom: 16px;
+  font-weight: 400;
+
+  margin-bottom: 18px;
 }
 
-.localizacao a {
+.localizacao p {
+  font-size: 15px;
+  line-height: 1.6;
+
+  color: #555555;
+}
+
+.botao-localizacao {
   display: inline-block;
-  margin-top: 24px;
-  padding: 14px 26px;
+
+  margin-top: 26px;
+
+  padding: 14px 28px;
 
   background: #080808;
   color: #ffffff;
 
   text-decoration: none;
-  font-size: 13px;
+
+  font-size: 12px;
+  font-weight: bold;
   letter-spacing: 1px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
-/* CONTATO */
+.botao-localizacao:hover {
+  background: #222222;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTATO / RODAPÉ
+========================= */
+
 .contato {
   background: #080808;
   color: #ffffff;
+
   text-align: center;
-  padding: 70px 24px;
+
+  padding: 72px 24px 42px;
 }
 
-.contato h2 {
-  font-family: Georgia, serif;
-  font-size: 34px;
-  margin-bottom: 8px;
+.logo-rodape {
+  width: 210px;
+  max-width: 80%;
+  height: auto;
+
+  margin-bottom: 34px;
 }
 
-.contato p {
-  color: #a6a6a6;
-  margin-bottom: 30px;
-}
 
-.contato a {
-  display: block;
-  width: 100%;
+/* LINKS */
+
+.links-contato {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
   max-width: 320px;
+  margin: 0 auto 30px;
+}
 
-  margin: 12px auto;
-  padding: 15px 20px;
+.links-contato a {
+  display: block;
 
-  text-decoration: none;
+  width: 100%;
+
+  padding: 14px 20px;
+
   border: 1px solid #ffffff;
 
   color: #ffffff;
-  font-size: 13px;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: bold;
   letter-spacing: 1px;
 
-  transition: 0.3s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.contato a:hover {
+.links-contato a:hover {
   background: #ffffff;
   color: #080808;
+
+  transform: translateY(-2px);
 }
 
-/* DESKTOP */
+
+/* INFORMAÇÕES */
+
+.instagram {
+  font-size: 13px;
+  margin-bottom: 8px;
+
+  color: #ffffff;
+}
+
+.cidade {
+  font-size: 12px;
+
+  color: #a6a6a6;
+}
+
+
+/* =========================
+   TABLET / DESKTOP
+========================= */
+
 @media (min-width: 768px) {
+
   .hero-conteudo {
     max-width: 520px;
   }
 
-  .marca h1 {
-    font-size: 100px;
+  .logo-ar {
+    width: 320px;
   }
 
   .foto-profissional {
@@ -244,7 +393,17 @@ background-color: #080808;
     height: 320px;
   }
 
+  .chamada {
+    font-size: 28px;
+  }
+
   .lista-procedimentos {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .foto-procedimento {
+    width: 150px;
+    height: 150px;
+  }
+
 }
