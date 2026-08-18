@@ -138,35 +138,19 @@ body {
   color: #080808;
 
   text-align: center;
-
-  padding: 74px 28px 78px;
-
-  position: relative;
-  overflow: hidden;
+  padding: 72px 28px 76px;
 }
 
-.sobre-detalhe {
-  font-family: Georgia, serif;
+.sobre-intro {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
 
-  font-size: 18px;
   letter-spacing: 3px;
 
-  color: #a6a6a6;
+  color: #8a8a8a;
 
   margin-bottom: 18px;
-}
-
-.sobre-detalhe::after {
-  content: "";
-
-  display: block;
-
-  width: 38px;
-  height: 1px;
-
-  margin: 12px auto 0;
-
-  background: #a6a6a6;
 }
 
 .sobre h2 {
@@ -174,26 +158,32 @@ body {
 
   font-size: 32px;
   font-weight: 400;
-
   line-height: 1.15;
 
   max-width: 340px;
 
-  margin: 0 auto 22px;
+  margin: 0 auto;
 }
 
-.sobre p {
-  max-width: 520px;
+.sobre-linha {
+  width: 38px;
+  height: 1px;
+
+  background: #080808;
+
+  margin: 22px auto;
+}
+
+.sobre-texto {
+  max-width: 500px;
 
   margin: 0 auto;
 
   font-size: 14px;
-
   line-height: 1.85;
 
   color: #555555;
 }
-
 /* =========================
    PROCEDIMENTOS
 ========================= */
