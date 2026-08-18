@@ -547,22 +547,37 @@ body {
 }
 
 
-/* ÍCONES SVG */
+/* ÍCONES DOS BOTÕES DO RODAPÉ */
+
+.icone-contato {
+  width: 30px;
+  margin-right: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+}
 
 .icone-contato svg {
   width: 18px;
   height: 18px;
+
   display: block;
-  fill: currentColor;
+
+  fill: #ffffff;
 }
 
-.whatsapp-flutuante svg {
-  width: 25px;
-  height: 25px;
-  display: block;
-  fill: currentColor;
+/* Quando o botão fica branco */
+
+.links-contato a:hover .icone-contato {
+  color: #080808;
 }
 
+.links-contato a:hover .icone-contato svg {
+  fill: #080808;
+}
 
 /* =========================
    TABLET / DESKTOP
