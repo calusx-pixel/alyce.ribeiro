@@ -168,25 +168,31 @@ body {
 .procedimentos {
   background: #ffffff;
   color: #080808;
+
   text-align: center;
+
   padding: 72px 20px;
 }
+
 
 /* TÍTULO */
 
 .procedimentos h2 {
   font-family: Georgia, serif;
+
   font-size: 34px;
   font-weight: 400;
+
   margin-bottom: 42px;
 }
+
 
 /* GRADE DOS PROCEDIMENTOS */
 
 .lista-procedimentos {
   display: grid;
 
-  /* 2 procedimentos por linha no celular */
+  /* 2 procedimentos por linha */
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
   column-gap: 20px;
@@ -198,16 +204,19 @@ body {
   margin: 0 auto;
 }
 
+
 /* CADA PROCEDIMENTO */
 
 .lista-procedimentos article {
   width: 100%;
+
   text-align: center;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 /* FOTO CIRCULAR */
 
@@ -220,6 +229,7 @@ body {
   border-radius: 50%;
 
   background-color: #eeeeee;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,6 +242,7 @@ body {
   overflow: hidden;
 }
 
+
 /* NOME DO PROCEDIMENTO */
 
 .lista-procedimentos h3 {
@@ -239,6 +250,7 @@ body {
 
   font-size: 16px;
   font-weight: 400;
+
   line-height: 1.3;
 
   max-width: 150px;
@@ -293,6 +305,7 @@ body {
   background-image: url("assets/epilacao-facial.jpg");
 }
 
+
 /* =========================
    LOCALIZAÇÃO
 ========================= */
@@ -321,6 +334,9 @@ body {
 
   color: #555555;
 }
+
+
+/* BOTÃO LOCALIZAÇÃO */
 
 .botao-localizacao {
   display: inline-block;
@@ -362,9 +378,13 @@ body {
   padding: 72px 24px 42px;
 }
 
+
+/* LOGO DO RODAPÉ */
+
 .logo-rodape {
   width: 210px;
   max-width: 80%;
+
   height: auto;
 
   margin-bottom: 34px;
@@ -380,6 +400,7 @@ body {
   gap: 12px;
 
   max-width: 320px;
+
   margin: 0 auto 30px;
 }
 
@@ -418,6 +439,7 @@ body {
 
 .instagram {
   font-size: 13px;
+
   margin-bottom: 8px;
 
   color: #ffffff;
@@ -453,8 +475,14 @@ body {
     font-size: 28px;
   }
 
+  /* Mantém os procedimentos em pares */
   .lista-procedimentos {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 650px;
+
+    column-gap: 50px;
+    row-gap: 45px;
   }
 
   .foto-procedimento {
