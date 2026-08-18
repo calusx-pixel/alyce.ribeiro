@@ -547,7 +547,9 @@ body {
 }
 
 
-/* ÍCONES DOS BOTÕES DO RODAPÉ */
+/* =========================
+   ÍCONES DO RODAPÉ
+========================= */
 
 .icone-contato {
   width: 30px;
@@ -556,6 +558,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex-shrink: 0;
 
   color: #ffffff;
 }
@@ -569,7 +573,8 @@ body {
   fill: #ffffff;
 }
 
-/* Quando o botão fica branco */
+
+/* ÍCONES AO PASSAR O MOUSE */
 
 .links-contato a:hover .icone-contato {
   color: #080808;
@@ -579,12 +584,26 @@ body {
   fill: #080808;
 }
 
+
+/* SVG DO WHATSAPP FLUTUANTE */
+
+.whatsapp-flutuante svg {
+  width: 25px;
+  height: 25px;
+
+  display: block;
+
+  fill: currentColor;
+}
+
+
 /* =========================
    ANIMAÇÃO AO ROLAR
 ========================= */
 
 .revelar {
   opacity: 0;
+
   transform: translateY(18px);
 
   transition:
@@ -594,56 +613,35 @@ body {
 
 .revelar.ativo {
   opacity: 1;
+
   transform: translateY(0);
 }
 
-/* Pequenos atrasos nos procedimentos */
 
-.lista-procedimentos article:nth-child(2) {
-  transition-delay: 0.06s;
-}
+/* PEQUENO ATRASO NO SEGUNDO
+   ITEM DE CADA LINHA */
 
-.lista-procedimentos article:nth-child(3) {
-  transition-delay: 0.10s;
-}
-
-.lista-procedimentos article:nth-child(4) {
-  transition-delay: 0.14s;
-}
-
-.lista-procedimentos article:nth-child(5) {
-  transition-delay: 0.18s;
-}
-
-.lista-procedimentos article:nth-child(6) {
-  transition-delay: 0.22s;
-}
-
-.lista-procedimentos article:nth-child(7) {
-  transition-delay: 0.26s;
-}
-
-.lista-procedimentos article:nth-child(8) {
-  transition-delay: 0.30s;
-}
-
-.lista-procedimentos article:nth-child(9) {
-  transition-delay: 0.34s;
-}
-
+.lista-procedimentos article:nth-child(2),
+.lista-procedimentos article:nth-child(4),
+.lista-procedimentos article:nth-child(6),
+.lista-procedimentos article:nth-child(8),
 .lista-procedimentos article:nth-child(10) {
-  transition-delay: 0.38s;
+  transition-delay: 0.07s;
 }
 
-/* Respeita usuários que preferem menos animações */
+
+/* ACESSIBILIDADE */
 
 @media (prefers-reduced-motion: reduce) {
+
   .revelar {
     opacity: 1;
     transform: none;
     transition: none;
   }
+
 }
+
 /* =========================
    TABLET / DESKTOP
 ========================= */
