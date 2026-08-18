@@ -398,19 +398,29 @@ body {
 
   text-align: center;
 
-  padding: 72px 24px 42px;
+  padding: 68px 24px 42px;
+}
+
+.logo-rodape {
+  width: 190px;
+  max-width: 75%;
+  height: auto;
+
+  margin-bottom: 22px;
 }
 
 
-/* LOGO DO RODAPÉ */
+/* CHAMADA */
 
-.logo-rodape {
-  width: 210px;
-  max-width: 80%;
+.contato-chamada {
+  font-family: Georgia, serif;
 
-  height: auto;
+  font-size: 18px;
+  font-weight: 400;
 
-  margin-bottom: 34px;
+  margin-bottom: 28px;
+
+  color: #f6f5f2;
 }
 
 
@@ -420,39 +430,55 @@ body {
   display: flex;
   flex-direction: column;
 
-  gap: 12px;
+  gap: 11px;
 
+  width: 100%;
   max-width: 320px;
 
   margin: 0 auto 30px;
 }
 
 .links-contato a {
-  display: block;
+  display: flex;
+  align-items: center;
 
   width: 100%;
 
-  padding: 14px 20px;
+  padding: 14px 18px;
 
-  border: 1px solid #ffffff;
+  border: 1px solid #777777;
 
   color: #ffffff;
-
   text-decoration: none;
 
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
 
   transition:
     background 0.25s ease,
     color 0.25s ease,
+    border-color 0.25s ease,
     transform 0.25s ease;
+}
+
+.icone-contato {
+  width: 30px;
+
+  margin-right: 12px;
+
+  font-size: 19px;
+  font-weight: 400;
+
+  text-align: center;
 }
 
 .links-contato a:hover {
   background: #ffffff;
   color: #080808;
+
+  border-color: #ffffff;
 
   transform: translateY(-2px);
 }
@@ -461,19 +487,64 @@ body {
 /* INFORMAÇÕES */
 
 .instagram {
-  font-size: 13px;
+  font-size: 12px;
 
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
   color: #ffffff;
 }
 
 .cidade {
-  font-size: 12px;
+  font-size: 11px;
 
   color: #a6a6a6;
 }
 
+
+/* =========================
+   WHATSAPP FLUTUANTE
+========================= */
+
+.whatsapp-flutuante {
+  position: fixed;
+
+  right: 18px;
+  bottom: 18px;
+
+  z-index: 1000;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #080808;
+
+  border: 1px solid #080808;
+
+  text-decoration: none;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.whatsapp-flutuante:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.30);
+}
 
 /* =========================
    TABLET / DESKTOP
